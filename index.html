@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-STUDY SUPREME AI</title>
+    <style>
+        body { background:#050c1a; color:white; font-family:sans-serif; margin:0; text-align:center; padding-bottom:100px; }
+        .header { background:#0a3d62; padding:15px; border-bottom:3px solid #d4af37; display:flex; align-items:center; position:sticky; top:0; z-index:1000; }
+        
+        /* SIDE MENU */
+        .sidenav { height: 100%; width: 0; position: fixed; z-index: 1001; top: 0; left: 0; background-color: #0a3d62; overflow-x: hidden; transition: 0.5s; padding-top: 60px; }
+        .sidenav a { padding: 15px 25px; text-decoration: none; font-size: 18px; color: #d4af37; display: block; font-weight:bold; }
+        .menu-btn { font-size:30px; cursor:pointer; color:#d4af37; margin-right:15px; }
+
+        /* DASHBOARD & BLACKBOARD */
+        .blackboard { background:#1e3d2f; border:8px solid #5d4037; border-radius:12px; margin:15px; padding:20px; min-height:150px; box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+        .card { background:rgba(255,255,255,0.05); border:1px solid #d4af37; border-radius:15px; margin:15px; padding:15px; text-align:left; }
+        
+        /* BUTTONS GRID */
+        .grid { display:grid; grid-template-columns: 1fr 1fr; gap:10px; padding:15px; }
+        .btn { padding:15px; border-radius:12px; border:none; font-weight:bold; cursor:pointer; font-size:14px; }
+        .gold { background:#d4af37; color:black; }
+        .blue { background:#1e3799; color:white; }
+
+        /* LIBRARY SHELF */
+        .book-card { background:white; color:#333; margin:10px; border-radius:10px; display:flex; align-items:center; padding:10px; border-left:5px solid #d4af37; }
+        
+        .footer { background:#d4af37; color:black; padding:10px; font-weight:bold; position:fixed; bottom:0; width:100%; z-index:1000; }
+    </style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" onclick="closeNav()" style="font-size:30px;">&times;</a>
+  <a href="#">🏠 HOME</a>
+  <a href="#">📂 PROJECTS (Ramayan/Ambedkar)</a>
+  <a href="#">🏛️ IAS GALLERY</a>
+  <a href="#">📞 CONTACT AMAN SIR</a>
+</div>
+
+<div class="header">
+    <span class="menu-btn" onclick="openNav()">&#9776;</span>
+    <div>X-STUDY SUPREME PRO</div>
+</div>
+
+<div class="card" style="background:#d4af37; color:black;">
+    <b>🏆 RANK: IAS ASPIRANT 🇮🇳</b> | Target: 1 Lakh/Day
+</div>
+
+<div class="blackboard">
+    <div style="color:red; font-size:10px; text-align:right;">● AUTO-REC</div>
+    <div id="boardText" style="font-size:18px;">Namaste Aman! <br> Chaliye <b>9th/10th aur IAS</b> ki padhai shuru karein.</div>
+</div>
+
+<div class="grid">
+    <button class="btn gold" onclick="play('🇮🇳 IAS MODE', 'UPSC Mission 2035 Active! LBSNAA ki taiyari shuru.')">🇮🇳 IAS EXAM</button>
+    <button class="btn blue" onclick="play('📚 BOARD EXAM', 'UP Board aur CBSE class 10th special notes.')">📚 BOARD EXAM</button>
+    <button class="btn blue" onclick="alert('🔒 CHALLENGE: Phone Locked for 3 Hours!')">🔒 BLOCKER</button>
+    <button class="btn gold" onclick="play('🏎️ BMW MODE', 'Vroom! Fast revision mode on.')">🏎️ BMW MODE</button>
+</div>
+
+<h2 style="color:#d4af37;">📚 DIGITAL LIBRARY</h2>
+<div class="book-card">
+    <div style="font-size:30px; margin-right:15px;">📖</div>
+    <div><b>10th Science Notes</b><br><small>Board Exam Special</small></div>
+</div>
+<div class="book-card">
+    <div style="font-size:30px; margin-right:15px;">🏛️</div>
+    <div><b>IAS Samvidhan PDF</b><br><small>All Competition Exam</small></div>
+</div>
+
+<div class="footer">
+    <marquee scrollamount="10">🏎️ BMW M5 | 🏛️ LBSNAA | ✈️ PRIVATE JET FOR MOM | 🏠 LUXURY MANSION</marquee>
+</div>
+
+<script>
+    function openNav() { document.getElementById("mySidenav").style.width = "250px"; }
+    function closeNav() { document.getElementById("mySidenav").style.width = "0"; }
+    function play(t, m) {
+        document.getElementById('boardText').innerHTML = "<b>" + t + "</b><br>" + m;
+        window.speechSynthesis.cancel();
+        let s = new SpeechSynthesisUtterance(m);
+        s.lang = 'hi-IN'; window.speechSynthesis.speak(s);
+    }
+</script>
+
+</body>
+  </html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-STUDY SUPREME AI</title>
+    <style>
+        body { background:#050c1a; color:white; font-family:sans-serif; margin:0; text-align:center; padding-bottom:100px; }
+        .header { background:#0a3d62; padding:15px; border-bottom:3px solid #d4af37; font-weight:bold; }
+        
+        /* 3D TEACHER & BLACKBOARD AREA */
+        .classroom { background:#1e3d2f; border:10px solid #5d4037; border-radius:15px; margin:15px; padding:20px; min-height:250px; position:relative; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
+        .teacher { width:100px; position:absolute; bottom:10px; right:10px; animation: breathe 3s infinite; }
+        @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        #boardText { font-size:20px; color:#fff; text-align:left; font-family:'Courier New', monospace; }
+
+        /* REAL BOOK CARDS */
+        .book-link { background:white; color:#333; margin:15px; border-radius:15px; display:flex; align-items:center; padding:15px; border-left:8px solid #d4af37; text-decoration:none; transition:0.3s; }
+        .book-link:hover { transform: translateY(-5px); background:#f1f1f1; }
+        .icon { font-size:40px; margin-right:15px; }
+        .title { font-weight:bold; font-size:16px; color:#0a3d62; display:block; }
+
+        .footer { background:#d4af37; color:black; padding:10px; font-weight:bold; position:fixed; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div class="header">🎓 X-STUDY AI CLASSROOM</div>
+
+<div class="classroom">
+    <div id="boardText">Namaste Aman!<br>Aaj hum <b>IAS Mission 2035</b> ke liye NCERT padhenge. Kitab niche se chunein.</div>
+    <img src="https://cdn-icons-png.flaticon.com/512/3429/3429433.png" class="teacher">
+</div>
+
+<h2 style="color:#d4af37;">📚 ASALI DIGITAL LIBRARY</h2>
+
+<a href="https://ncert.nic.in/textbook/pdf/jesc101.pdf" target="_blank" class="book-link">
+    <div class="icon">🔬</div>
+    <div><span class="title">10th Science (Full Book)</span><small>Click karke padhai shuru karein</small></div>
+</a>
+
+<a href="https://ncert.nic.in/textbook/pdf/keps201.pdf" target="_blank" class="book-link">
+    <div class="icon">🏛️</div>
+    <div><span class="title">IAS: Indian Constitution</span><small>UPSC Special Material</small></div>
+</a>
+
+<a href="https://ncert.nic.in/textbook/pdf/jemh101.pdf" target="_blank" class="book-link">
+    <div class="icon">📐</div>
+    <div><span class="title">9th Mathematics</span><small>Foundation for Competition</small></div>
+</a>
+
+<div class="footer">
+    <marquee scrollamount="10">🏎️ BMW M5 DREAM | 🏛️ LBSNAA | ✈️ PRIVATE JET FOR MOM | 🏢 GLOWVERSE</marquee>
+</div>
+
+<script>
+    console.log("X-STUDY Pro Loaded: Teacher & Real Books Active!");
+</script>
+
+</body>
+</html>
